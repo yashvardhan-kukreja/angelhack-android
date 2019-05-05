@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="0dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:elevation="0dp"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/qr_image_view"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_qr_border" />
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/pullToRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pullToRefresh">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:text="Sparsh Srivastava" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:elevation="0dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/timerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Your Event Begins in"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:foregroundGravity="center">
+
+                        <TextView
+                            android:id="@+id/daysRemaining"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="48dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center"
+                            android:text="40"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@id/hoursRemaining"
+                            app:layout_constraintTop_toTopOf="@id/hoursRemaining" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center"
+                            android:text="Days"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="@+id/daysRemaining"
+                            app:layout_constraintStart_toStartOf="@+id/daysRemaining"
+                            app:layout_constraintTop_toBottomOf="@+id/daysRemaining" />
+
+                        <TextView
+                            android:id="@+id/hoursRemaining"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center"
+                            android:text="40"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.47"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center"
+                            android:text="Hours"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="@+id/hoursRemaining"
+                            app:layout_constraintStart_toStartOf="@+id/hoursRemaining"
+                            app:layout_constraintTop_toBottomOf="@+id/hoursRemaining" />
+
+                        <TextView
+                            android:id="@+id/minutesRemaining"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="48dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center"
+                            android:text="40"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@id/hoursRemaining"
+                            app:layout_constraintTop_toTopOf="@id/hoursRemaining" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center"
+                            android:text="Mins"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="@+id/minutesRemaining"
+                            app:layout_constraintStart_toStartOf="@+id/minutesRemaining"
+                            app:layout_constraintTop_toBottomOf="@+id/minutesRemaining" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/additionalDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_wifi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:text="WiFi"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+                    <TextView
+                        android:id="@+id/appTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Coupon Pin"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/contactTextView" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:background="#C6C2C2"
+                        app:layout_constraintBottom_toBottomOf="@+id/contactTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/contactTextView" />
+
+                    <TextView
+                        android:id="@+id/wifiPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/appTextView"
+                        app:layout_constraintStart_toEndOf="@+id/view4"
+                        app:layout_constraintTop_toTopOf="@+id/appTextView" />
+
+                    <TextView
+                        android:id="@+id/contactTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Coupon ID"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:background="#C6C2C2"
+                        app:layout_constraintBottom_toBottomOf="@+id/appTextView"
+                        app:layout_constraintEnd_toEndOf="@+id/view3"
+                        app:layout_constraintStart_toStartOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="@+id/appTextView" />
+
+                    <TextView
+                        android:id="@+id/wifiId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/contactTextView"
+                        app:layout_constraintStart_toEndOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="@+id/contactTextView" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/circle_avatar_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:id="@+id/tv_speaker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#CC000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:id="@+id/tv_speaker_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

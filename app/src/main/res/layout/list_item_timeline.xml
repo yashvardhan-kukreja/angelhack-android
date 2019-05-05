@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="viewEnd"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/sessionCircle"
+        app:layout_constraintEnd_toStartOf="@+id/sessionCircle"
+        app:layout_constraintTop_toTopOf="@+id/sessionCircle" />
+
+    <View
+        android:id="@+id/line_time_view"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/sessionCircle"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_timeline_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/line_time_view"
+        app:layout_constraintEnd_toEndOf="@+id/line_time_view"
+        app:layout_constraintStart_toStartOf="@+id/line_time_view"
+        app:layout_constraintTop_toTopOf="@+id/line_time_view" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FAFAFA"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/line_time_view"
+        app:layout_constraintEnd_toEndOf="@+id/line_time_view"
+        app:layout_constraintStart_toStartOf="@+id/line_time_view"
+        app:layout_constraintTop_toTopOf="@+id/line_time_view" />
+
+    <TextView
+        android:id="@+id/tv_session_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical|start"
+        android:text="Android"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/sessionCircle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sessionCircle"
+        app:layout_constraintTop_toTopOf="@+id/sessionCircle" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Android is Awesome"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="@+id/tv_session_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_session_name" />
+
+    <TextView
+        android:text="Android is a metaphor"
+        android:id="@+id/tv_session_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:foregroundGravity="center"
+        android:gravity="start|center_vertical"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_session_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_session_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+</android.support.constraint.ConstraintLayout>

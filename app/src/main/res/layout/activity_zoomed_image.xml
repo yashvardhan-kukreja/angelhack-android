@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".activities.ZoomedImageActivity">
+
+    <TextView
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="32dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:text="Proceed to Scan your QR Code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/qrImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_margin="32dp" />
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="32dp"
+        android:background="@drawable/stroked_button_background"
+        android:paddingBottom="8dp"
+        android:paddingEnd="32dp"
+        android:paddingStart="32dp"
+        android:paddingTop="8dp"
+        android:text="Close"
+        android:textColor="@color/colorAccent" />
+
+</RelativeLayout>

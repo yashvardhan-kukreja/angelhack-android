@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_info"
+        android:title="@string/information_title" />
+
+
+    <item
+        android:id="@+id/navigation_schedule"
+        android:icon="@drawable/ic_timeline"
+        android:title="@string/timeline_title" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_person"
+        android:title="@string/profile_title" />
+
+    <item
+        android:id="@+id/navigation_scannables"
+        android:icon="@drawable/ic_scannable"
+        android:title="@string/scannables_title" />
+
+    <item
+        android:id="@+id/navigation_faq"
+        android:icon="@drawable/ic_faq"
+        android:title="@string/faq_title" />
+
+</menu>
